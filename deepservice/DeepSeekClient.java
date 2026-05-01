@@ -7,6 +7,7 @@ import com.google.gson.reflect.TypeToken;
 import deepservice.exception.ActionParseException;
 import deepservice.exception.DeepSeekAPIException;
 import deepservice.model.Action;
+import deepservice.model.ClipboardContext;
 import deepservice.model.Platform;
 import deepservice.prompt.SystemPromptGenerator;
 import okhttp3.*;
@@ -44,8 +45,17 @@ public class DeepSeekClient {
     }
 
     public List<Action> execute(String instruction) throws DeepSeekAPIException, ActionParseException {
+        return execute(instruction, (String) null);
+    }
+
+    public List<Action> execute(String instruction, ClipboardContext clipboard) throws DeepSeekAPIException, ActionParseException {
+        String clipboardContent = clipboard != null ? clipboard.getContent() : null;
+        return execute(instruction, clipboardContent);
+    }
+
+    public List<Action> execute(String instruction, String clipboardContent) throws DeepSeekAPIException, ActionParseException {
         List<Message> messages = new ArrayList<>();
-        messages.add(new Message("system", SystemPromptGenerator.generate(platform)));
+        messages.add(new Message("system", SystemPromptGenerator.generatePromptWithClipboard(platform, clipboardContent)));
         messages.add(new Message("user", instruction));
 
         String response = callApi(messages);

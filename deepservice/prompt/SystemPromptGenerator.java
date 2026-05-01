@@ -4,7 +4,13 @@ import deepservice.model.Platform;
 
 public class SystemPromptGenerator {
 
+    private static final int MAX_CLIPBOARD_LENGTH = 2000;
+
     public static String generate(Platform platform) {
+        return generatePromptWithClipboard(platform, null);
+    }
+
+    public static String generatePromptWithClipboard(Platform platform, String clipboardContent) {
         boolean isWindows = platform == Platform.WINDOWS;
         String modifier = isWindows ? "ctrl" : "cmd";
         String modifierDisplay = isWindows ? "Ctrl" : "Cmd";
@@ -135,6 +141,19 @@ public class SystemPromptGenerator {
         }
         prompt.append("\n");
         prompt.append("普通键: a-z, 0-9, enter, space, tab, escape, backspace, delete, home, end, page_up, page_down, f1-f12, up, down, left, right, =, -, [, ], \\, ;, ', ,, ., /, print_screen, scroll_lock, pause, insert\n\n");
+
+        if (clipboardContent != null && !clipboardContent.isEmpty()) {
+            String truncatedContent = clipboardContent;
+            if (clipboardContent.length() > MAX_CLIPBOARD_LENGTH) {
+                truncatedContent = clipboardContent.substring(0, MAX_CLIPBOARD_LENGTH) + 
+                    "...[已截断，共" + clipboardContent.length() + "字符]";
+            }
+            prompt.append("当前编辑区文本内容：\n");
+            prompt.append("```\n");
+            prompt.append(truncatedContent);
+            prompt.append("\n```\n\n");
+        }
+
         prompt.append("只输出 JSON，不要输出任何其他内容。");
 
         return prompt.toString();
