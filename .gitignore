@@ -1,0 +1,38 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+target/
+
+# Android
+*.apk
+*.ap_
+*.dex
+bin/
+gen/
+out/
+.gradle/
+build/
+local.properties
+proguard/
+*.log
+*.nav
+
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.settings/
+.project
+.classpath
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+test_deepseek.py
+*.pyc

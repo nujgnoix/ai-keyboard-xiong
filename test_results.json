@@ -1,0 +1,380 @@
+{
+  "windows": {
+    "删除全文": {
+      "actions": [
+        {
+          "type": "key_combo",
+          "keys": [
+            "ctrl",
+            "a"
+          ],
+          "description": "全选全文"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "delete"
+          ],
+          "description": "删除选中内容"
+        }
+      ]
+    },
+    "把前三个字放大": {
+      "actions": [
+        {
+          "type": "key_combo",
+          "keys": [
+            "shift",
+            "left"
+          ],
+          "description": "向左选中第一个字"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "shift",
+            "left"
+          ],
+          "description": "向左选中第二个字"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "shift",
+            "left"
+          ],
+          "description": "向左选中第三个字"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "ctrl",
+            "shift",
+            ">"
+          ],
+          "description": "放大选中的三个字"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "right"
+          ],
+          "description": "取消选中，光标归位"
+        }
+      ]
+    },
+    "把前三个字加粗": {
+      "actions": [
+        {
+          "type": "key_combo",
+          "keys": [
+            "shift",
+            "left"
+          ],
+          "description": "向左选中第一个字"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "shift",
+            "left"
+          ],
+          "description": "向左选中第二个字"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "shift",
+            "left"
+          ],
+          "description": "向左选中第三个字"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "ctrl",
+            "b"
+          ],
+          "description": "加粗选中的文字"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "right"
+          ],
+          "description": "取消选中并光标归位"
+        }
+      ]
+    },
+    "输入今晚打老虎用26号字": {
+      "actions": [
+        {
+          "type": "key_combo",
+          "keys": [
+            "ctrl",
+            "shift",
+            "p"
+          ],
+          "description": "打开字体大小输入框"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "2"
+          ],
+          "description": "输入数字2"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "6"
+          ],
+          "description": "输入数字6"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "enter"
+          ],
+          "description": "确认字号设置"
+        },
+        {
+          "type": "clipboard_paste",
+          "text": "今晚打老虎",
+          "description": "输入文本'今晚打老虎'"
+        }
+      ]
+    },
+    "把这一行加粗": {
+      "actions": [
+        {
+          "type": "key_combo",
+          "keys": [
+            "home"
+          ],
+          "description": "移动到行首"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "shift",
+            "end"
+          ],
+          "description": "选中整行"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "ctrl",
+            "b"
+          ],
+          "description": "加粗"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "right"
+          ],
+          "description": "取消选中并归位"
+        }
+      ]
+    }
+  },
+  "macos": {
+    "删除全文": {
+      "actions": [
+        {
+          "type": "key_combo",
+          "keys": [
+            "cmd",
+            "a"
+          ],
+          "description": "全选全文"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "backspace"
+          ],
+          "description": "删除选中内容"
+        }
+      ]
+    },
+    "把前三个字放大": {
+      "actions": [
+        {
+          "type": "key_combo",
+          "keys": [
+            "shift",
+            "right"
+          ],
+          "description": "向右选择第一个字"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "shift",
+            "right"
+          ],
+          "description": "向右选择第二个字"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "shift",
+            "right"
+          ],
+          "description": "向右选择第三个字"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "cmd",
+            "shift",
+            "."
+          ],
+          "description": "增大字号"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "right"
+          ],
+          "description": "取消选中并归位光标"
+        }
+      ]
+    },
+    "把前三个字加粗": {
+      "actions": [
+        {
+          "type": "key_combo",
+          "keys": [
+            "shift",
+            "left"
+          ],
+          "description": "向左选一个字符"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "shift",
+            "left"
+          ],
+          "description": "向左选一个字符"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "shift",
+            "left"
+          ],
+          "description": "向左选一个字符"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "cmd",
+            "b"
+          ],
+          "description": "加粗"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "right"
+          ],
+          "description": "归位"
+        }
+      ]
+    },
+    "输入今晚打老虎用26号字": {
+      "actions": [
+        {
+          "type": "clipboard_paste",
+          "text": "今晚打老虎",
+          "description": "输入文本'今晚打老虎'"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "cmd",
+            "a"
+          ],
+          "description": "全选文本"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "cmd",
+            "t"
+          ],
+          "description": "打开字体面板"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "2"
+          ],
+          "description": "输入字号十位数2"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "6"
+          ],
+          "description": "输入字号个位数6"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "enter"
+          ],
+          "description": "确认字号设置"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "right"
+          ],
+          "description": "取消选中，光标归位"
+        }
+      ]
+    },
+    "把这一行加粗": {
+      "actions": [
+        {
+          "type": "key_combo",
+          "keys": [
+            "cmd",
+            "left"
+          ],
+          "description": "移动到行首"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "shift",
+            "cmd",
+            "right"
+          ],
+          "description": "选中整行"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "cmd",
+            "b"
+          ],
+          "description": "加粗"
+        },
+        {
+          "type": "key_combo",
+          "keys": [
+            "right"
+          ],
+          "description": "取消选中并归位"
+        }
+      ]
+    }
+  }
+}
